@@ -27,9 +27,12 @@ function boolToWord( bool ){
 // Reverse a string without using .reverse
 
 function reverseString (str) {
-    let newStr = ''
-    for (i=str.length - 1; i >= 0; i --){
-        newStr += str[i]
+    let newStr = []
+    const strArr = str.split('')
+    for (i=strArr.length - 1; i >= 0; i --){
+        newStr += strArr[i]
     }
-    return newStr
+    const joinedStr = newStr.toString()
+    return joinedStr
 }
+
