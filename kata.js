@@ -26,15 +26,13 @@ function boolToWord( bool ){
 
 // Reverse a string without using .reverse
 
-function reverseString (str) {
-    let newStr = []
-    const strArr = str.split('')
-    for (i=strArr.length - 1; i >= 0; i --){
-        newStr += strArr[i]
+function solution(str){
+    let r=''
+    for (i=str.length - 1; i>=0; i--){
+      r+= str[i]
     }
-    const joinedStr = newStr.toString()
-    return joinedStr
-}
+    return r
+  }
 
 // Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.
 
