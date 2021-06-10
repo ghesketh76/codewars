@@ -76,3 +76,9 @@ function getMiddle(s)
   
   return middle.join('')
 }
+
+// Given an array of integers, return a new array with each value doubled.
+
+function maps(y){
+    return y.map(x => x*2)
+   }
