@@ -82,3 +82,24 @@ function getMiddle(s)
 function maps(y){
     return y.map(x => x*2)
    }
+
+// You get an array of numbers, return the sum of all of the positives ones.
+
+function positiveSum(arr) {
+    let posArr = []
+    
+    const reducer = (acc, item) => {
+      return acc + item
+    }
+    if (arr.length === 0) {
+      return 0
+    } else {
+      for (i = 0; i< arr.length; i++){
+        if (arr[i] > 0) {
+          posArr.push(arr[i])
+        }
+      }
+    }
+    
+    return posArr.reduce(reducer, 0)
+  }
