@@ -103,3 +103,20 @@ function positiveSum(arr) {
     
     return posArr.reduce(reducer, 0)
   }
+
+ // Given an array of integers of any length, return an array that has 1 added to the value represented by the array.
+
+ function upArray(arr){
+    let newArr = arr
+    if ( arr[arr.length - 1] < 0) {
+      return null
+    } else {
+      if (arr[arr.length-1] === 9) {
+        newArr[newArr.length - 2] = arr[arr.length - 2] + 1
+        newArr[newArr.length -1] = 0
+      } else {
+        newArr[newArr.length -1] = arr[arr.length -1] + 1
+      }
+    }
+    return newArr
+  }
