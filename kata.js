@@ -120,3 +120,14 @@ function positiveSum(arr) {
     }
     return newArr
   }
+
+// count unique elements in an array
+
+var uniqueCount=function(iterable){
+    const arr = iterable.split('')
+    let uniq = {}
+    for (i=0; i<arr.length; i++) {
+      uniq[arr[i]] = 1 + uniq[arr[i]] || 1
+    }
+    return uniq
+  }
