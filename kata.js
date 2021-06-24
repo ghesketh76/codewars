@@ -154,3 +154,38 @@ function persistence(num) {
     }
     return i
   }
+
+// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+// It should remove all values from list a, which are present in list b keeping their order.
+// arrayDiff([1,2,2,2,3],[2]) == [1,3]
+
+function arrayDiff(a, b) {
+    let uniq = []
+    let not = []
+    for (i = 0; i<a.length; i++){
+      if (b.includes(a[i])){
+        uniq.push(a[i])
+      } else {
+        not.push(a[i])
+      }
+    }
+    return not
+  }
+
+  function array_diff(a, b) {
+    return a.filter(e => !b.includes(e));
+  }
+
+// In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+function filter_list(l) {
+    let newList = []
+    for (i=0; i<l.length; i++){
+      if (Number.isInteger(l[i])) {
+        newList.push(l[i])
+      }
+                           
+    }
+    return newList
+  }
